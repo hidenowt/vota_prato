@@ -1,5 +1,6 @@
 class Restaurante < ActiveRecord::Base
 	# relacionamentos
+	has_many :comentarios, :as => :comentavel
 	has_many :qualificacoes
 	has_and_belongs_to_many :pratos
 
