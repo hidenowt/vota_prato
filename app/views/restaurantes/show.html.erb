@@ -15,6 +15,10 @@
   <%= @restaurante.especialidade %>
 </p>
 
+<b>Nota media: <%= @restaurante.qualificacoes.average(:nota) %></b>
+<b>Qualificações: <%= @restaurante.qualificacoes.count %></b>
+<b>Preço Medio: <%= @restaurante.qualificacoes.average(:valor_gasto) %></b>
+
 <%= link_to "Qualificar este restaurante", :controller => "qualificacoes",
 																 					 :action 		 => "new",
 																 					 :cliente 	 => @restaurante %>
